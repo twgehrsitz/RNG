@@ -13,10 +13,6 @@ Random number generator practice project for taking requirements.
 ## GCP with Java Guide
 
 ## VM with Python Guide
-
-## VM with Java Guide
-
-## Python VM setup - Cory
 1.	Go to GCP and go to the compute engine
 2.	Go to vm instances and create a new machine
 3.	For our purpose I just used a g1-small, probably could go small if desired
@@ -68,8 +64,8 @@ If this shows your server should be running.
 
 Side note-  the fire wall rule we setup may have not been necessary.
 
-Chapter 2 – Bryant
-Java App-Engine
+
+## VM with Java Guide
 1.	Load up a new project in GCP
 2.	Go to App Engine Dashboard
 3.	Click start tutorial and select Java.
