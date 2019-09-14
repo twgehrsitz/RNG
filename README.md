@@ -75,4 +75,6 @@ Our working version of the site accessable to anyone.  http://34.69.126.180/  if
 
 ## Tests - Hope Anderson
 To runs tests from terminal within directory containing test file, type 
-```python3 test_servers.py```
+```bash
+python3 test_servers.py
+```
