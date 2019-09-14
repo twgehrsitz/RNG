@@ -28,23 +28,24 @@ Random number generator practice project for taking requirements.
 3.	Click start tutorial and select Java.
 4.	Run through the tutorial and deploy the tutorial application
 5.	Open Shell (ensure you are in directory appengine-try-java) and launch code editor (pencil icon at the top of the cloud shell console) for the tutorial app
-6.	Enter the DemoServlet.java file by following the directory path of appengine-try-java/src/main/java/myapp/demoserverlet.java
+6.	Enter the DemoServlet.java file by following the directory path of `appengine-try-java/src/main/java/myapp/demoserverlet.java`
 7.	Within the doGet() function type:
- “int randomNumber = (int)(Math.random() * 1000000);”
-8.    Remove:
-“resp.getWriter().println("{ \"value\": \"World\"}");”
+ `int randomNumber = (int)(Math.random() * 1000000);`
+8. Remove:
+`resp.getWriter().println("{ \"value\": \"World\"}");`
 8.	Replace with:
+<pre><code>
 PrintWriter out = resp.getWriter();
 out.printf("{ \"value\": \"%d\"}", randomNumber);
-9.	Navigate to index.html in the directory path appengine-try-java/src/main/webapp/index.html and delete the line 
-$('#result').html("Hello, " + data.name);
+</code><pre>
+9.	Navigate to index.html in the directory path `appengine-try-java/src/main/webapp/index.html` and delete the line 
+`$('#result').html("Hello, " + data.name);`
 and replace with
-$('#result').html(data.value);
+`$('#result').html(data.value);`
 10.	Return to Bash shell and type:
-“gcloud config set project \ <YOUR-PROJECT-ID>”
+`gcloud config set project \ <YOUR-PROJECT-ID>`
 (YOUR PROJECT-ID CAN BE FOUND AT GCP HOME DASHBOARD)
-“mvn appengine:deploy”
-11.	 Here is my working link: https://javaproject0-251917.appspot.com/
+`mvn appengine:deploy`
 
 ## VM with Python Guide - Cory White
 1.	Go to GCP and go to the compute engine
