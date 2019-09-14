@@ -1,0 +1,12 @@
+# YAML Header modified by OUCS4263-SoftBearEngineering 
+# for RNG practice project. Simply sets the Python 2.7 
+# environment and initiates the rng.app script to 
+# generate the random number.
+
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: rng.app
