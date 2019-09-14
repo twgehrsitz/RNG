@@ -74,4 +74,4 @@ Our working version of the site accessable to anyone.  http://34.69.126.180/  if
 ## VM with Java Guide - Tim Gehrsitz
 
 ## Tests - Hope Anderson
-To runs tests from terminal within directory containing test file, type '''python3 test_servers.py
+To runs tests from terminal within directory containing test file, type ```python3 test_servers.py
