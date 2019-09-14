@@ -17,7 +17,7 @@ Random number generator practice project for taking requirements.
 6. Change directories into your preferred directory to store the files.
 6. Run the command `gsutil -m cp -R gs://BUCKETNAME ./GCLOUDFOLDERNAME`, where
  * BUCKETNAME is the name of the bucket found in the Storage browser.
- * GCLOUDFOLDERNAME will create a new directory to store the files uploaded into the bucket.
+ * GCLOUDFOLDERNAME will create a new directory to store the files downloaded from the bucket.
 7. Change directories into the GCloud Folder created in step 6.
 8. Run `gcloud app deploy` and enter Y to confirm. Run `gcloud app browse` and click the link to view the random number.
 
