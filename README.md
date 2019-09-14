@@ -37,7 +37,7 @@ Random number generator practice project for taking requirements.
 <pre><code>
 PrintWriter out = resp.getWriter();
 out.printf("{ \"value\": \"%d\"}", randomNumber);
-</code><pre>
+</code></pre>
 9.	Navigate to index.html in the directory path `appengine-try-java/src/main/webapp/index.html` and delete the line 
 `$('#result').html("Hello, " + data.name);`
 and replace with
