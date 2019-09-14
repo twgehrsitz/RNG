@@ -48,43 +48,18 @@ and replace with
 `mvn appengine:deploy`
 
 ## VM with Python Guide - Cory White
+(In this we presume there is not VM already made so there may be steps that can be skipped)
 1.	Go to GCP and go to the compute engine
 2.	Go to vm instances and create a new machine
 3.	For our purpose I just used a g1-small
 4.	Allow https and https traffic and click create
-5.	Once the instance is created click on it and scroll down to network interfaces
-6.	Click the view details button on the far right of the default network row
-7.	Here on the left side of the page click "firewall rules"
-8.	At the top of the page click "create firewall rule"
-9.	Give it a name and a description if desired.
-10.	In the target tags input flask
-11.	In the source ip ranges input 0.0.0.0/0
-12.	Next select tcp check box in the protocols and ports and in the textbox input 5000. Click "Create"
-14.	Once that is finished creating go back to your VM instance list and open up the ssh to the newly created VM
-16.	Run the following commands:
- * `sudo apt-get update`
- * Make sure python is install by running `python –version` if not, `run sudo apt-get python`
- * Now we will make a directory for our project. Run `mkdir rng-proj`
- *	Run `cd rng-proj`
- * We will now want to install pip. Run `sudo apt-get install python-pip` and input "y" when it asks for confirmation
- *	When finished, run `sudo pip install flask`
-17.	Create the "server.py" file using `touch server.py'
-18.	Paste the following text into "server.py" with your text editor of choice:
-
-<pre><code>
-import random
-from flask import Flask
-app = Flask(__name__)
-@app.route(‘/’)
-Def index():
-rn= random.randint(1,1000000)
-return str(rn)
-if __name__ == “__main__”:
-app.run(host=’0.0.0.0’,port=80)
-</code></pre>
-
-20. Save and close the file
-21. Run the command `sudo python server.py`. If you installed and set everything up correctly, you should recieve a message similar to:
+5.	Once that is finished creating go back to your VM instance list and open up the ssh to the newly created VM
+6.	Run the following commands:
+ * `sudo apt-get update` , `sudo apt-get install python-pip`
+ * Now we clone the directory and cd into VM_Python. Run `source env/bin/activate` we are now in the virtualenvironment
+ *	Run `pip install flask` just to be sure flask is installed on the machine
+7.	Run the "server.py" file using `sudo python server.py'
+If you installed and set everything up correctly, you should recieve a message similar to:
 
 <pre><code>
 Serving Flask app "server" (lazy loading) 
@@ -92,6 +67,8 @@ Serving Flask app "server" (lazy loading)
 *Debug mode: off * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
 </code></pre>
 
-22. To connect to the server you will use your vms external ip but we need to use http to connect, not https, so the url for example would be http://11.111.11.11/. The random number will appear in the top left corner of the page.
+8. To connect to the server you will use your vms external ip but we need to use http to connect, not https, so the url for example would be http://11.111.11.11/. The random number will appear in the top left corner of the page.
+
+Our working version of the site accessable to anyone.  http://34.69.126.180/  if there are any issues during the setup process, this link should show we have infact made a working version of the site as requested.
 
 ## VM with Java Guide - Tim Gehrsitz
